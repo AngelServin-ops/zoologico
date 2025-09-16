@@ -1,0 +1,12 @@
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\com\mycompany\persistencia\Persistencia.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\conexion\ConexionBD.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\conexion\IConexionBD.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\DAO\AnimalDAO.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\DAO\EspecieDAO.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\DAO\ZoologicoDAO.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\entidades\Animal.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\entidades\Especie.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\entidades\Zoologico.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\interfaces\IAnimalDAO.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\interfaces\IEspecieDAO.java
+C:\Users\Usuario\Documents\NetBeansProjects\persistencia\src\main\java\interfaces\IZoologicoDAO.java

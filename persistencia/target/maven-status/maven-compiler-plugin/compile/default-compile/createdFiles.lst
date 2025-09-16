@@ -1,0 +1,12 @@
+DAO\ZoologicoDAO.class
+entidades\Animal.class
+DAO\AnimalDAO.class
+DAO\IEspecieDAO.class
+DAO\IZoologicoDAO.class
+entidades\ConexionBD.class
+entidades\IConexionBD.class
+com\mycompany\persistencia\Persistencia.class
+entidades\Zoologico.class
+DAO\EspecieDAO.class
+entidades\Especie.class
+DAO\IAnimalDAO.class
