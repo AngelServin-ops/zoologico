@@ -15,4 +15,5 @@ public interface IConexionBD {
 
     Connection crearConexion() throws SQLException;
 
+    void cerrarConexion(Connection conn) throws SQLException;
 }

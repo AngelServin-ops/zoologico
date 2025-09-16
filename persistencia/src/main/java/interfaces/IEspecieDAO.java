@@ -5,6 +5,7 @@
 package interfaces;
 
 import entidades.Especie;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -13,13 +14,13 @@ import java.util.List;
  */
 public interface IEspecieDAO {
 
-    Especie agregarEspecie(Especie especie);
+    Especie agregarEspecie(Especie especie) throws SQLException;
 
-    Especie actualizarEspecie(Especie especie);
+    Especie actualizarEspecie(Especie especie) throws SQLException;
 
-    Especie eliminarEspecie(Especie especie);
+    Especie eliminarEspecie(Especie especie) throws SQLException;
 
-    Especie consultarEspeciePorId(Integer id);
+    Especie consultarEspeciePorId(Integer id) throws SQLException;
 
-    List<Especie> consultarTodasLasEspecies();
+    List<Especie> consultarTodasLasEspecies() throws SQLException;
 }

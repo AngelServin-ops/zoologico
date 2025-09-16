@@ -54,14 +54,20 @@ public class Animal {
         this.zoologico = zoologico;
     }
 
+    public Animal(String identificacion, Sexo sexo, Integer anio_nacimiento, Especie especie, Zoologico zoologico) {
+        this.identificacion = identificacion;
+        this.sexo = sexo;
+        this.anio_nacimiento = anio_nacimiento;
+        this.especie = especie;
+        this.zoologico = zoologico;
+    }
+
     public Animal() {
     }
-    
-    
 
     // Enumeración para el campo sexo
     public enum Sexo {
-        Macho, Hembra
+        MACHO, HEMBRA
     }
 
     public Integer getId_animal() {

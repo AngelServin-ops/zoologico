@@ -16,15 +16,11 @@ public interface IAnimalDAO {
 
     Animal agregarAnimal(Animal animal) throws SQLException;
 
-    // Método para actualizar un animal existente
     Animal actualizarAnimal(Animal animal) throws SQLException;
 
-    // Método para eliminar un animal
     Animal eliminarAnimal(Animal animal) throws SQLException;
 
-    // Método para consultar un animal por su ID
     Animal consultarAnimalPorId(Integer id) throws SQLException;
 
-    // Método para consultar todos los animales
     List<Animal> consultarTodosLosAnimales() throws SQLException;
 }

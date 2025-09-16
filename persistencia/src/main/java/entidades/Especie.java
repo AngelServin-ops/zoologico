@@ -43,6 +43,13 @@ public class Especie {
         this.peligro_extincion = peligro_extincion;
     }
 
+    public Especie(String nombre_vulgar, String nombre_cientifico, String familia, Boolean peligro_extincion) {
+        this.nombre_vulgar = nombre_vulgar;
+        this.nombre_cientifico = nombre_cientifico;
+        this.familia = familia;
+        this.peligro_extincion = peligro_extincion;
+    }
+
     public Especie() {
     }
 

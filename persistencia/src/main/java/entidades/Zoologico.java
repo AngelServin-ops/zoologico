@@ -4,7 +4,7 @@
  */
 package entidades;
 
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -40,6 +40,13 @@ public class Zoologico {
 
     public Zoologico(Integer id_zoologico, String nombre, String ciudad, String pais, Date fecha_inauguracion) {
         this.id_zoologico = id_zoologico;
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.pais = pais;
+        this.fecha_inauguracion = fecha_inauguracion;
+    }
+
+    public Zoologico(String nombre, String ciudad, String pais, Date fecha_inauguracion) {
         this.nombre = nombre;
         this.ciudad = ciudad;
         this.pais = pais;

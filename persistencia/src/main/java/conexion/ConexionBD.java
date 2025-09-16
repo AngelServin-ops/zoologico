@@ -20,9 +20,9 @@ public class ConexionBD implements IConexionBD {
 
     // Constructor que usa los parámetros pasados
     public ConexionBD(String usuario, String contrasena) {
-        this.cadenaConexion = "jdbc:mysql://localhost/zoologico_db"; // Asumiendo que esta es la DB del proyecto
-        this.usuario = usuario;
-        this.password = contrasena;
+        this.cadenaConexion = "jdbc:mysql://localhost/zoologico_db"; 
+        this.usuario = usuario="root";
+        this.password = contrasena="Angel.240831";
     }
 
     // Constructor sin parámetros para usar los valores fijos
@@ -39,5 +39,17 @@ public class ConexionBD implements IConexionBD {
             throw new SQLException("Error: No se pudo cargar el driver JDBC de MySQL.", e);
         }
         return DriverManager.getConnection(cadenaConexion, usuario, password);
+    }
+    // En la clase ConexionBD
+
+    @Override
+    public void cerrarConexion(Connection conn) {
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                System.err.println("Error al cerrar la conexión: " + e.getMessage());
+            }
+        }
     }
 }
