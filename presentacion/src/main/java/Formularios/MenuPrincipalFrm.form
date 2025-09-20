@@ -28,9 +28,9 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="266" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jButton2" max="32767" attributes="0"/>
-                          <Component id="jButton3" pref="203" max="32767" attributes="0"/>
-                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="btnGestionAnimal" max="32767" attributes="0"/>
+                          <Component id="btnGestionZoologico" pref="203" max="32767" attributes="0"/>
+                          <Component id="btnGestionEspecie" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -48,23 +48,23 @@
               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" pref="74" max="-2" attributes="0"/>
+              <Component id="btnGestionEspecie" min="-2" pref="74" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="70" max="-2" attributes="0"/>
+              <Component id="btnGestionAnimal" min="-2" pref="70" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" pref="78" max="-2" attributes="0"/>
+              <Component id="btnGestionZoologico" min="-2" pref="78" max="-2" attributes="0"/>
               <EmptySpace pref="81" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btnGestionEspecie">
       <Properties>
         <Property name="text" type="java.lang.String" value="Gestion de Especies"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGestionEspecieActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
@@ -75,12 +75,12 @@
         <Property name="text" type="java.lang.String" value="Menu Principal"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btnGestionAnimal">
       <Properties>
         <Property name="text" type="java.lang.String" value="Gestion de Animales"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btnGestionZoologico">
       <Properties>
         <Property name="text" type="java.lang.String" value="Gestion de Zoologicos"/>
       </Properties>
