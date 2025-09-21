@@ -46,8 +46,18 @@ public class MenuPrincipalFrm extends javax.swing.JFrame {
         jLabel1.setText("Menu Principal");
 
         btnGestionAnimal.setText("Gestion de Animales");
+        btnGestionAnimal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionAnimalActionPerformed(evt);
+            }
+        });
 
         btnGestionZoologico.setText("Gestion de Zoologicos");
+        btnGestionZoologico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGestionZoologicoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -84,33 +94,22 @@ public class MenuPrincipalFrm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGestionEspecieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEspecieActionPerformed
-        // TODO add your handling code here:
+        EspeciesFrm pantallaEspecies = new EspeciesFrm();
+        
     }//GEN-LAST:event_btnGestionEspecieActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void btnGestionAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionAnimalActionPerformed
+        AnimalesFrm pantallaAnimales = new AnimalesFrm();
+        
+        pantallaAnimales.setVisible(true);
+    }//GEN-LAST:event_btnGestionAnimalActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new MenuPrincipalFrm().setVisible(true));
-    }
+    private void btnGestionZoologicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionZoologicoActionPerformed
+        ZoologicosFrm pantallaZoo = new ZoologicosFrm();
+        
+        pantallaZoo.setVisible(true);
+    }//GEN-LAST:event_btnGestionZoologicoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGestionAnimal;

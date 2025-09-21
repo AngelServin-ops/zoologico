@@ -79,11 +79,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Gestion de Animales"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGestionAnimalActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnGestionZoologico">
       <Properties>
         <Property name="text" type="java.lang.String" value="Gestion de Zoologicos"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGestionZoologicoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
