@@ -11,18 +11,12 @@ package Formularios;
 public class MenuPrincipalFrm extends javax.swing.JFrame {
 
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MenuPrincipalFrm.class.getName());
-    private EspeciesFrm pantallaEspecies;
-    private ZoologicosFrm pantallaZoo;
-    private AnimalesFrm pantallaAnimales;
 
     /**
      * Creates new form MenuPrincipalFrm
      */
     public MenuPrincipalFrm() {
         initComponents();
-        this.pantallaEspecies = new EspeciesFrm();
-        this.pantallaZoo = new ZoologicosFrm();
-        this.pantallaAnimales = new AnimalesFrm();
     }
 
     /**
@@ -100,17 +94,20 @@ public class MenuPrincipalFrm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGestionEspecieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionEspecieActionPerformed
-    pantallaEspecies.setVisible(true);
-
+        EspeciesFrm pantallaEspecies = new EspeciesFrm();
+        this.dispose();
+        pantallaEspecies.setVisible(true);
     }//GEN-LAST:event_btnGestionEspecieActionPerformed
 
     private void btnGestionAnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionAnimalActionPerformed
-
+        AnimalesFrm pantallaAnimales = new AnimalesFrm();
+        this.dispose();
         pantallaAnimales.setVisible(true);
     }//GEN-LAST:event_btnGestionAnimalActionPerformed
 
     private void btnGestionZoologicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGestionZoologicoActionPerformed
-
+        ZoologicosFrm pantallaZoo = new ZoologicosFrm();
+        this.dispose();
         pantallaZoo.setVisible(true);
     }//GEN-LAST:event_btnGestionZoologicoActionPerformed
 

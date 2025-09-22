@@ -35,4 +35,31 @@ CREATE TABLE animales (
         ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
 ALTER TABLE animales MODIFY COLUMN sexo ENUM('MACHO', 'HEMBRA') NOT NULL;
+ALTER TABLE animales MODIFY COLUMN id_especie INT NULL;
+ALTER TABLE animales MODIFY COLUMN id_zoologico INT NULL;
+
+INSERT INTO especies (nombre_vulgar, nombre_cientifico, familia, peligro_extincion) VALUES
+('León', 'Panthera leo', 'Felidae', false),
+('Elefante africano', 'Loxodonta africana', 'Elephantidae', true),
+('Pingüino emperador', 'Aptenodytes forsteri', 'Spheniscidae', true),
+('Cebra de Grant', 'Equus quagga boehmi', 'Equidae', false);
+
+INSERT INTO zoologicos (nombre, ciudad, pais, fecha_inauguracion) VALUES
+('Zoo Nacional', 'Ciudad de México', 'México', '1924-07-06'),
+('Bioparque Estrella', 'Estado de México', 'México', '1995-02-12'),
+('Africam Safari', 'Puebla', 'México', '1972-04-02'),
+('Acuario Inbursa', 'Ciudad de México', 'México', '2014-06-11'),
+('Zoológico Guadalajara', 'Guadalajara', 'México', '1988-03-25');
+
+INSERT INTO animales (identificacion, sexo, anio_nacimiento, id_especie, id_zoologico) VALUES
+('L-001', 'MACHO', 2020, 1, 1),
+('L-002', 'HEMBRA', 2019, 1, 1),
+('EA-001', 'MACHO', 2022, 2, 2),
+('EA-002', 'HEMBRA', 2021, 2, 2),
+('PE-001', 'MACHO', 2023, 3, 3),
+('PE-002', 'HEMBRA', 2023, 3, 3),
+('ZG-001', 'MACHO', 2021, 4, 1),
+('ZG-002', 'HEMBRA', 2020, 4, 2);
+

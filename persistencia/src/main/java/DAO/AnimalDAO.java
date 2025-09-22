@@ -31,7 +31,8 @@ public class AnimalDAO implements IAnimalDAO {
 
     @Override
     public Animal agregarAnimal(Animal animal) throws SQLException {
-        String sql = "INSERT INTO animales (identificacion, sexo, anio_nacimiento, id_especie, id_zoologico) VALUES (?, ?, ?, ?, ?)";
+
+        String sql = "INSERT INTO animales (identificacion, sexo, anio_nacimiento) VALUES (?, ?, ?)";
         Connection conn = null;
         try {
             conn = conexion.crearConexion();
@@ -39,13 +40,8 @@ public class AnimalDAO implements IAnimalDAO {
                 ps.setString(1, animal.getIdentificacion());
                 ps.setString(2, animal.getSexo().toString());
                 ps.setInt(3, animal.getAnio_nacimiento());
-                ps.setInt(4, animal.getEspecie().getId_especie());
-                if (animal.getZoologico() != null) {
-                    ps.setInt(5, animal.getZoologico().getId_zoologico());
-                } else {
-                    ps.setNull(5, java.sql.Types.INTEGER);
-                }
                 ps.executeUpdate();
+
                 try (ResultSet rs = ps.getGeneratedKeys()) {
                     if (rs.next()) {
                         animal.setId_animal(rs.getInt(1));
@@ -60,7 +56,8 @@ public class AnimalDAO implements IAnimalDAO {
 
     @Override
     public Animal actualizarAnimal(Animal animal) throws SQLException {
-        String sql = "UPDATE animales SET identificacion = ?, sexo = ?, anio_nacimiento = ?, id_especie = ?, id_zoologico = ? WHERE id_animal = ?";
+
+        String sql = "UPDATE animales SET identificacion = ?, sexo = ?, anio_nacimiento = ? WHERE id_animal = ?";
         Connection conn = null;
         try {
             conn = conexion.crearConexion();
@@ -68,14 +65,10 @@ public class AnimalDAO implements IAnimalDAO {
                 ps.setString(1, animal.getIdentificacion());
                 ps.setString(2, animal.getSexo().toString());
                 ps.setInt(3, animal.getAnio_nacimiento());
-                ps.setInt(4, animal.getEspecie().getId_especie());
-                if (animal.getZoologico() != null) {
-                    ps.setInt(5, animal.getZoologico().getId_zoologico());
-                } else {
-                    ps.setNull(5, java.sql.Types.INTEGER);
-                }
-                ps.setInt(6, animal.getId_animal());
+                ps.setInt(4, animal.getId_animal());
+
                 ps.executeUpdate();
+
                 return animal;
             }
         } finally {
@@ -130,8 +123,8 @@ public class AnimalDAO implements IAnimalDAO {
         String sql = "SELECT a.id_animal, a.identificacion, a.sexo, a.anio_nacimiento, "
                 + "e.id_especie, e.nombre_vulgar, e.nombre_cientifico, e.familia, e.peligro_extincion, "
                 + "z.id_zoologico, z.nombre, z.ciudad, z.pais, z.fecha_inauguracion "
-                + "FROM animales a JOIN especies e ON a.id_especie = e.id_especie "
-                + "LEFT JOIN zoologicos z ON a.id_zoologico = z.id_zoologico";
+                + "FROM animales a LEFT JOIN especies e ON a.id_especie = e.id_especie "
+                + "LEFT JOIN zoologicos z ON a.id_zoologico = z.id_zoologico"; // La consulta termina aquí
         Connection conn = null;
         try {
             conn = conexion.crearConexion();

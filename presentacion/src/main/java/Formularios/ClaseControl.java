@@ -9,18 +9,18 @@ package Formularios;
 import DAO.AnimalDAO;
 import DAO.EspecieDAO;
 import DAO.ZoologicoDAO;
-import conexion.ConexionBD;
-public class ClaseControl {
-    private final AnimalDAO animalDAO;
-    private final EspecieDAO especieDAO;
-    private final ZoologicoDAO zoologicoDAO;
 
-    public ClaseControl(AnimalDAO animalDAO, EspecieDAO especieDAO, ZoologicoDAO zoologicoDAO) {
-        ConexionBD conexion = new ConexionBD();
-        this.animalDAO = animalDAO;
-        this.especieDAO = especieDAO;
-        this.zoologicoDAO = zoologicoDAO;
-    }
-    
-    
+public class ClaseControl {
+//    private final AnimalDAO animalDAO;
+//    private final EspecieDAO especieDAO;
+//    private final ZoologicoDAO zoologicoDAO;
+//
+//    public ClaseControl(AnimalDAO animalDAO, EspecieDAO especieDAO, ZoologicoDAO zoologicoDAO) {
+//        ConexionBD conexion = new ConexionBD();
+//        this.animalDAO = animalDAO;
+//        this.especieDAO = especieDAO;
+//        this.zoologicoDAO = zoologicoDAO;
+//    }
+//    
+//    
 }
